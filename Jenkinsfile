@@ -1,10 +1,6 @@
-pipeline {
-  agent any 
-  stages {
-    stage('Stage 1') {
-      steps {
-        echo 'Hello world!' 
-      }
-    }
+node {
+  stage('composer_install') {
+    // Run `composer update` as a shell script
+    sh 'composer update'
   }
 }
